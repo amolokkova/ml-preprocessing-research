@@ -1,0 +1,5 @@
+Dataset,Experiment,Model,Preprocessing,Accuracy,F1-score,ROC-AUC
+Breast Cancer,Models comparison,LogisticRegression,SimpleImputer + StandardScaler,0.9737,0.9639,0.996
+Breast Cancer,Models comparison,SVC,SimpleImputer + StandardScaler,0.9649,0.95,0.9914
+Breast Cancer,Models comparison,RandomForestClassifier,SimpleImputer + StandardScaler,0.9649,0.95,0.9942
+Breast Cancer,Models comparison,MLPClassifier,SimpleImputer + StandardScaler,0.9649,0.95,0.9927

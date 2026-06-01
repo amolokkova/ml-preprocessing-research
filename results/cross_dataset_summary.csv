@@ -1,0 +1,24 @@
+Dataset,Experiment,Model,Accuracy,F1-score,ROC-AUC,Preprocessing,Balancing
+Adult,Baseline,LogisticRegression,0.852,0.6539,0.9012,,
+Adult,Scaling,LogisticRegression,0.852,0.6539,0.9012,No scaling,
+Adult,Scaling,LogisticRegression,0.8525,0.6568,0.904,StandardScaler,
+Adult,Scaling,LogisticRegression,0.8525,0.6547,0.9021,MinMaxScaler,
+Adult,Imputation,LogisticRegression,0.8525,0.6568,0.904,SimpleImputer median/mode,
+Adult,Imputation,LogisticRegression,0.8525,0.6568,0.904,KNNImputer numeric,
+Adult,Balancing,LogisticRegression,0.8525,0.6568,0.904,,No balancing
+Adult,Balancing,LogisticRegression,0.806,0.6747,0.9042,,class_weight balanced
+Adult,Balancing,LogisticRegression,0.8071,0.6762,0.9034,,SMOTE
+Adult,Models comparison,LogisticRegression,0.8525,0.6568,0.904,SimpleImputer + StandardScaler + OneHotEncoder,
+Adult,Models comparison,SVC,0.8495,0.6435,0.8987,SimpleImputer + StandardScaler + OneHotEncoder,
+Adult,Models comparison,RandomForestClassifier,0.8505,0.6631,0.8932,SimpleImputer + StandardScaler + OneHotEncoder,
+Adult,Models comparison,MLPClassifier,0.8517,0.6625,0.9004,SimpleImputer + StandardScaler + OneHotEncoder,
+Breast Cancer,Baseline,LogisticRegression,0.9386,0.9114,0.9937,,
+Breast Cancer,Scaling,LogisticRegression,0.9386,0.9114,0.9937,No scaling,
+Breast Cancer,Scaling,LogisticRegression,0.9737,0.9639,0.996,StandardScaler,
+Breast Cancer,Scaling,LogisticRegression,0.9649,0.95,0.9997,MinMaxScaler,
+Breast Cancer,Imputation,LogisticRegression,0.9737,0.9639,0.996,SimpleImputer median,
+Breast Cancer,Imputation,LogisticRegression,0.9737,0.9639,0.996,KNNImputer,
+Breast Cancer,Models comparison,LogisticRegression,0.9737,0.9639,0.996,SimpleImputer + StandardScaler,
+Breast Cancer,Models comparison,SVC,0.9649,0.95,0.9914,SimpleImputer + StandardScaler,
+Breast Cancer,Models comparison,RandomForestClassifier,0.9649,0.95,0.9942,SimpleImputer + StandardScaler,
+Breast Cancer,Models comparison,MLPClassifier,0.9649,0.95,0.9927,SimpleImputer + StandardScaler,

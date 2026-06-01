@@ -2,49 +2,101 @@
 
 ## Описание проекта
 
-Исследование влияния методов предобработки данных на качество моделей машинного обучения на примере датасета Adult Census.
+Проект исследует влияние методов предобработки данных на качество моделей машинного обучения на двух датасетах:
 
-## Цель исследования
+- Adult Census Income;
+- Breast Cancer Wisconsin Diagnostic Dataset.
 
-Оценить, как методы импутации, масштабирования и балансировки классов влияют на Accuracy, F1-score и ROC-AUC моделей машинного обучения.
+Цель работы - показать, как импутация, масштабирование, кодирование категориальных признаков и балансировка классов влияют на Accuracy, F1-score и ROC-AUC в разных типах задач бинарной классификации.
 
-## Используемый датасет
+## Что исследуется
 
-Adult Census Income Dataset. Целевая переменная: `class`, положительный класс для F1-score: `>50K`.
+- обработка пропусков;
+- масштабирование числовых признаков;
+- кодирование категориальных признаков;
+- балансировка классов;
+- сравнение моделей на разных структурах данных.
 
-## Методы предобработки
+## Используемые методы
 
-- SimpleImputer
-- KNNImputer
-- StandardScaler
-- MinMaxScaler
-- OneHotEncoder
-- class_weight
-- SMOTE
+- SimpleImputer;
+- KNNImputer;
+- StandardScaler;
+- MinMaxScaler;
+- OneHotEncoder;
+- class_weight;
+- SMOTE.
 
 ## Модели
 
-- Logistic Regression
-- SVC
-- Random Forest
-- MLPClassifier
+- Logistic Regression;
+- SVC;
+- Random Forest;
+- MLPClassifier.
 
 ## Метрики
 
-- Accuracy
-- F1-score
-- ROC-AUC
+- Accuracy;
+- F1-score;
+- ROC-AUC.
+
+Для Adult Census положительный класс для F1-score: `>50K`.
+Для Breast Cancer положительный класс для F1-score: `malignant`.
+
+## Используемые технологии
+
+- Python 3.13
+- pandas
+- numpy
+- scikit-learn
+- imbalanced-learn
+- matplotlib
+- seaborn
+- Jupyter Notebook
+- Git
+- GitHub
+
+## Полученные навыки
+
+- Проведение Exploratory Data Analysis (EDA)
+- Подготовка и очистка данных
+- Обработка пропущенных значений
+- Масштабирование признаков
+- Балансировка классов
+- Построение Pipeline и ColumnTransformer
+- Оценка качества моделей машинного обучения
+- Сравнение моделей на разных датасетах
+- Проведение кросс-датасетного анализа
+- Работа с Git и GitHub
 
 ## Структура проекта
 
-- `data/` - исходные данные проекта.
-- `notebooks/` - EDA, baseline и экспериментальные ноутбуки.
-- `src/` - общие функции загрузки данных, метрик и сохранения артефактов.
-- `results/` - CSV-таблицы с результатами экспериментов.
-- `figures/` - графики, сохраненные из ноутбуков.
+- `data/` - исходные данные проекта;
+- `notebooks/` - EDA, baseline и экспериментальные ноутбуки;
+- `src/` - общие функции загрузки данных, метрик и сохранения артефактов;
+- `results/` - CSV-таблицы с результатами экспериментов;
+- `figures/` - графики, сохраненные из ноутбуков;
 - `report/` - материалы для итогового отчета.
 
+## Ноутбуки
+
+1. `notebooks/01_eda.ipynb` - EDA Adult Census.
+2. `notebooks/02_baseline.ipynb` - baseline Adult Census.
+3. `notebooks/03_scaling_experiment.ipynb` - scaling experiment Adult Census.
+4. `notebooks/04_imputation_experiment.ipynb` - imputation experiment Adult Census.
+5. `notebooks/05_balancing_experiment.ipynb` - balancing experiment Adult Census.
+6. `notebooks/06_models_comparison.ipynb` - models comparison Adult Census.
+7. `notebooks/07_final_analysis.ipynb` - final analysis Adult Census.
+8. `notebooks/08_breast_cancer_eda.ipynb` - EDA Breast Cancer.
+9. `notebooks/09_breast_cancer_baseline.ipynb` - baseline Breast Cancer.
+10. `notebooks/10_breast_cancer_scaling_experiment.ipynb` - scaling experiment Breast Cancer.
+11. `notebooks/11_breast_cancer_imputation_experiment.ipynb` - imputation experiment Breast Cancer.
+12. `notebooks/12_breast_cancer_models_comparison.ipynb` - models comparison Breast Cancer.
+13. `notebooks/13_cross_dataset_analysis.ipynb` - cross-dataset analysis.
+
 ## Основные результаты
+
+### Adult Census
 
 Baseline Logistic Regression:
 
@@ -52,7 +104,7 @@ Baseline Logistic Regression:
 |---:|---:|---:|
 | 0.8520 | 0.6539 | 0.9012 |
 
-Лучшие результаты в экспериментах Adult Census:
+Лучшие результаты Adult Census:
 
 | Критерий | Метод / модель | Значение |
 |---|---|---:|
@@ -60,7 +112,29 @@ Baseline Logistic Regression:
 | Лучший ROC-AUC | Logistic Regression + class_weight="balanced" | 0.9042 |
 | Лучшая Accuracy | Logistic Regression + StandardScaler | 0.8525 |
 
-Вывод: preprocessing влияет на качество моделей, но эффект зависит от метрики. При дисбалансе классов Accuracy не должна быть единственной метрикой; балансировка может снижать Accuracy, но улучшать F1-score для класса `>50K`.
+### Breast Cancer
+
+Baseline Logistic Regression:
+
+| Accuracy | F1-score | ROC-AUC |
+|---:|---:|---:|
+| 0.9386 | 0.9114 | 0.9937 |
+
+Лучшие результаты Breast Cancer:
+
+| Критерий | Метод / модель | Значение |
+|---|---|---:|
+| Лучший F1-score | Logistic Regression + StandardScaler | 0.9639 |
+| Лучший ROC-AUC | Logistic Regression + MinMaxScaler | 0.9997 |
+| Лучшая Accuracy | Logistic Regression + StandardScaler | 0.9737 |
+
+## Итоговые выводы
+
+На Adult Census основными сложностями были категориальные признаки, пропуски и дисбаланс классов. Поэтому качество заметно зависит от корректной обработки категорий, импутации и балансировки классов.
+
+На Breast Cancer все признаки числовые, пропуски отсутствуют, а модели показывают более высокое качество. Для этого датасета масштабирование имеет большее значение, потому что признаки измеряются в разных диапазонах.
+
+Импутация является обязательным безопасным шагом preprocessing pipeline, но более сложный KNNImputer не всегда улучшает качество. Главный вывод проекта: качество моделей зависит не только от выбранного алгоритма, но и от корректно построенной цепочки предобработки данных.
 
 ## Как запустить проект
 
@@ -71,16 +145,6 @@ Baseline Logistic Regression:
 pip install -r requirements.txt
 ```
 
-3. Запустить notebooks по порядку:
+3. Запускать ноутбуки по порядку из папки `notebooks/`.
 
-```text
-notebooks/01_eda.ipynb
-notebooks/02_baseline.ipynb
-notebooks/03_scaling_experiment.ipynb
-notebooks/04_imputation_experiment.ipynb
-notebooks/05_balancing_experiment.ipynb
-notebooks/06_models_comparison.ipynb
-notebooks/07_final_analysis.ipynb
-```
-
-Все методы предобработки реализованы внутри `Pipeline` и `ColumnTransformer`. SMOTE используется только внутри `imblearn.pipeline.Pipeline` после preprocessing и до classifier.
+Все методы предобработки реализованы внутри `Pipeline`, `ColumnTransformer` или `imblearn.pipeline.Pipeline`, чтобы избежать data leakage.

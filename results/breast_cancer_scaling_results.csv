@@ -1,0 +1,4 @@
+Dataset,Experiment,Model,Preprocessing,Accuracy,F1-score,ROC-AUC
+Breast Cancer,Scaling,LogisticRegression,No scaling,0.9386,0.9114,0.9937
+Breast Cancer,Scaling,LogisticRegression,StandardScaler,0.9737,0.9639,0.996
+Breast Cancer,Scaling,LogisticRegression,MinMaxScaler,0.9649,0.95,0.9997
