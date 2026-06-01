@@ -1,0 +1,5 @@
+Dataset,Experiment,Model,Preprocessing,Accuracy,F1-score,ROC-AUC
+Adult,Models comparison,LogisticRegression,SimpleImputer + StandardScaler + OneHotEncoder,0.8525,0.6568,0.904
+Adult,Models comparison,SVC,SimpleImputer + StandardScaler + OneHotEncoder,0.8495,0.6435,0.8987
+Adult,Models comparison,RandomForestClassifier,SimpleImputer + StandardScaler + OneHotEncoder,0.8505,0.6631,0.8932
+Adult,Models comparison,MLPClassifier,SimpleImputer + StandardScaler + OneHotEncoder,0.8517,0.6625,0.9004

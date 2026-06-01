@@ -1,0 +1,14 @@
+Dataset,Experiment,Model,Variant,Accuracy,F1-score,ROC-AUC
+Adult,Baseline,LogisticRegression,Baseline,0.852,0.6539,0.9012
+Adult,Scaling,LogisticRegression,No scaling,0.852,0.6539,0.9012
+Adult,Scaling,LogisticRegression,StandardScaler,0.8525,0.6568,0.904
+Adult,Scaling,LogisticRegression,MinMaxScaler,0.8525,0.6547,0.9021
+Adult,Imputation,LogisticRegression,SimpleImputer median/mode,0.8525,0.6568,0.904
+Adult,Imputation,LogisticRegression,KNNImputer numeric,0.8525,0.6568,0.904
+Adult,Balancing,LogisticRegression,No balancing,0.8525,0.6568,0.904
+Adult,Balancing,LogisticRegression,class_weight balanced,0.806,0.6747,0.9042
+Adult,Balancing,LogisticRegression,SMOTE,0.8071,0.6762,0.9034
+Adult,Models comparison,LogisticRegression,LogisticRegression,0.8525,0.6568,0.904
+Adult,Models comparison,SVC,SVC,0.8495,0.6435,0.8987
+Adult,Models comparison,RandomForestClassifier,RandomForestClassifier,0.8505,0.6631,0.8932
+Adult,Models comparison,MLPClassifier,MLPClassifier,0.8517,0.6625,0.9004

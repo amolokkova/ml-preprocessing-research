@@ -1,0 +1,3 @@
+Dataset,Experiment,Model,Preprocessing,Accuracy,F1-score,ROC-AUC
+Adult,Imputation,LogisticRegression,SimpleImputer median/mode,0.8525,0.6568,0.904
+Adult,Imputation,LogisticRegression,KNNImputer numeric,0.8525,0.6568,0.904

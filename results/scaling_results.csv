@@ -1,0 +1,4 @@
+Dataset,Experiment,Model,Preprocessing,Accuracy,F1-score,ROC-AUC
+Adult,Scaling,LogisticRegression,No scaling,0.852,0.6539,0.9012
+Adult,Scaling,LogisticRegression,StandardScaler,0.8525,0.6568,0.904
+Adult,Scaling,LogisticRegression,MinMaxScaler,0.8525,0.6547,0.9021

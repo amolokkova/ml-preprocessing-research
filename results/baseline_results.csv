@@ -1,0 +1,2 @@
+Dataset,Experiment,Model,Accuracy,F1-score,ROC-AUC
+Adult,Baseline,LogisticRegression,0.852,0.6539,0.9012

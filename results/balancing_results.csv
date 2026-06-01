@@ -1,0 +1,4 @@
+Dataset,Experiment,Model,Balancing,Accuracy,F1-score,ROC-AUC
+Adult,Balancing,LogisticRegression,No balancing,0.8525,0.6568,0.904
+Adult,Balancing,LogisticRegression,class_weight balanced,0.806,0.6747,0.9042
+Adult,Balancing,LogisticRegression,SMOTE,0.8071,0.6762,0.9034
